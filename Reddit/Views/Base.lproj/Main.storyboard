@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gJm-uE-ROs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="Pxt-y5-Mva">
+            <objects>
+                <tableViewController id="gJm-uE-ROs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mKE-om-XjB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="vvG-RN-oEJ" customClass="PostTableViewCell" customModule="Reddit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="147"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vvG-RN-oEJ" id="wXF-c8-lJq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xyu-jo-nwc">
+                                            <rect key="frame" x="5" y="5" width="136.5" height="137"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Xyu-jo-nwc" secondAttribute="height" multiplier="1:1" id="nvW-AY-iey"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-u6-NsG">
+                                            <rect key="frame" x="149.5" y="5" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-cm-aZh">
+                                            <rect key="frame" x="149.5" y="121.5" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PUf-u6-NsG" firstAttribute="top" secondItem="Xyu-jo-nwc" secondAttribute="top" id="5nw-4S-6Z9"/>
+                                        <constraint firstItem="Xyu-jo-nwc" firstAttribute="top" secondItem="wXF-c8-lJq" secondAttribute="top" constant="5" id="61D-Hc-75E"/>
+                                        <constraint firstItem="Xyu-jo-nwc" firstAttribute="leading" secondItem="wXF-c8-lJq" secondAttribute="leading" constant="5" id="Uwl-HP-Cae"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xyu-jo-nwc" secondAttribute="bottom" constant="5" id="WCz-5T-pqy"/>
+                                        <constraint firstItem="cTF-cm-aZh" firstAttribute="leading" secondItem="Xyu-jo-nwc" secondAttribute="trailing" constant="8" id="a2H-H2-LAb"/>
+                                        <constraint firstItem="cTF-cm-aZh" firstAttribute="bottom" secondItem="Xyu-jo-nwc" secondAttribute="bottom" id="hKX-E5-SKV"/>
+                                        <constraint firstItem="Xyu-jo-nwc" firstAttribute="width" secondItem="wXF-c8-lJq" secondAttribute="width" multiplier="0.33" id="idl-5s-4fA"/>
+                                        <constraint firstItem="PUf-u6-NsG" firstAttribute="leading" secondItem="Xyu-jo-nwc" secondAttribute="trailing" constant="8" id="lHg-p4-M5x"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="thumbnailImageView" destination="Xyu-jo-nwc" id="uB1-pJ-Lx2"/>
+                                    <outlet property="titleLabel" destination="PUf-u6-NsG" id="Mwg-mt-gn5"/>
+                                    <outlet property="upvoteLabel" destination="cTF-cm-aZh" id="Rsu-ij-9cn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gJm-uE-ROs" id="cIK-zz-Fob"/>
+                            <outlet property="delegate" destination="gJm-uE-ROs" id="Qmb-RC-y0s"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9c7-r4-QLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="-121.20535714285714"/>
+        </scene>
+    </scenes>
+</document>
